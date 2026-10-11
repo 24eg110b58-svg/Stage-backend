@@ -1,0 +1,25 @@
+# Maven build files
+
+target/
+!.mvn/wrapper/maven-wrapper.jar
+
+# IDE files
+
+.idea/
+.vscode/
+*.iml
+
+# Operating system files
+
+.DS_Store
+Thumbs.db
+
+# Logs
+
+*.log
+
+# Local environment and secrets
+
+.env
+.env.*
+!.env.example
