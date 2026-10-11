@@ -13,7 +13,6 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/students")
-@CrossOrigin(origins = "http://localhost:5173")
 public class StudentController {
 
     private final StudentRepository studentRepository;
