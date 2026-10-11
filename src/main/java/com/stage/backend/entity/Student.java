@@ -1,7 +1,6 @@
 package com.stage.backend.entity;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -11,67 +10,87 @@ import jakarta.persistence.Table;
 @Entity
 @Table(name = "students")
 public class Student {
-@Id
-@GeneratedValue(strategy = GenerationType.IDENTITY)
-private Long id;
 
-private String fullName;
-private String email;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
-@JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
-private String password;
+    private String fullName;
+    private String email;
 
-private String department;
-private String year;
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+    private String password;
 
-public Student() {
-}
+    private String department;
+    private String year;
 
-public Long getId() {
-    return id;
-}
+    private String skills;
+    private String achievements;
 
-public void setId(Long id) {
-    this.id = id;
-}
+    public Student() {
+    }
 
-public String getFullName() {
-    return fullName;
-}
+    public Long getId() {
+        return id;
+    }
 
-public void setFullName(String fullName) {
-    this.fullName = fullName;
-}
+    public void setId(Long id) {
+        this.id = id;
+    }
 
-public String getEmail() {
-    return email;
-}
+    public String getFullName() {
+        return fullName;
+    }
 
-public void setEmail(String email) {
-    this.email = email;
-}
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
+    }
 
-public String getPassword() {
-    return password;
-}
+    public String getEmail() {
+        return email;
+    }
 
-public void setPassword(String password) {
-    this.password = password;
-}
+    public void setEmail(String email) {
+        this.email = email;
+    }
 
-public String getDepartment() {
-    return department;
-}
+    public String getPassword() {
+        return password;
+    }
 
-public void setDepartment(String department) {
-    this.department = department;
-}
+    public void setPassword(String password) {
+        this.password = password;
+    }
 
-public String getYear() {
-    return year;
-}
+    public String getDepartment() {
+        return department;
+    }
 
-public void setYear(String year) {
-    this.year = year;
-}
+    public void setDepartment(String department) {
+        this.department = department;
+    }
+
+    public String getYear() {
+        return year;
+    }
+
+    public void setYear(String year) {
+        this.year = year;
+    }
+
+    public String getSkills() {
+        return skills;
+    }
+
+    public void setSkills(String skills) {
+        this.skills = skills;
+    }
+
+    public String getAchievements() {
+        return achievements;
+    }
+
+    public void setAchievements(String achievements) {
+        this.achievements = achievements;
+    }
 }
